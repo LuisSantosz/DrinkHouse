@@ -80,14 +80,19 @@ body, button, input, textarea {
 .product-image {
   width: 240px; /* Flex wrap coloca 2 posters por linha, pq a seção tem 600px */
   height: 144px;
+  display: grid;
+  grid-column: 2;
+  column-gap: 2;
 }
 
 .product-price-container {
   margin-top: 8px;
   width: 100%;
   display: flex;
+  grid-column: 2s;
   justify-content: flex-end;
   align-items: center;
+
 }
 
 .product-price {
