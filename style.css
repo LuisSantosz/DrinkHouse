@@ -17,6 +17,15 @@ body, button, input, textarea {
   font: 400 16px "Roboto", sans-serif;
 }
 
+body{
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+
 .title{
     text-align: center;
     background-color: black;
@@ -28,6 +37,7 @@ body, button, input, textarea {
   display: flex;
   padding: 5px;
   font-size: 20px;
+  color: white;
 }
 
 /* Main */
@@ -47,6 +57,7 @@ body, button, input, textarea {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 24px;
+  color: white;
 }
 
 .section-description {
