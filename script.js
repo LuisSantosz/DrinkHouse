@@ -91,9 +91,9 @@ if (document.readyState == 'loading') {
     } else {   
       alert(
         `
-          Obrigado pela sua compra!
+          Obrigado pela preferência, volte sempre!
           Valor do pedido: R$${totalAmount}\n
-          Volte sempre :)
+          
         `
       )
   
