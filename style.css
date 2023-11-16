@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Rock+Salt&display=swap');
 
+
 :root {
   --white: #fff;
   --red: #aa0505;
@@ -24,6 +25,7 @@ body{
   background-size: cover;
   color: white;
   
+  
 }
 
 
@@ -32,9 +34,11 @@ body{
     background-color: black;
     color: white;
     padding: 20px;
+    font-size: 40px;
+    font-family: serif;
 
     /*Animação de dentro do titulo*/
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-name: slidein;
     }
     
