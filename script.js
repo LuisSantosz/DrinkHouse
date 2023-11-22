@@ -85,17 +85,30 @@ if (document.readyState == 'loading') {
     newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change", checkIfInputIsNull)
   }
   
+
+  //Alert da SweetAlert2 -  https://sweetalert2.github.io/#themes
   function makePurchase() {
     if (totalAmount === "0,00") {
       alert("Seu carrinho está vazio!")
     } else {   
-      alert(
-        `
-          Obrigado pela preferência, volte sempre!
-          Valor do pedido: R$${totalAmount}\n
-          
-        `
-      )
+      Swal.fire({
+        title: "Deseja finalizar a compra?",
+        text: "Reveja os itens do carrinho",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#32CD32",
+        cancelButtonColor: "#d33",
+        cancelButtonText: "Cancelar",
+        confirmButtonText: "Finalizar compra"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Parabéns!",
+            text: "Compra finalizada.",
+            icon: "success"
+          });
+        }
+      });
   
       document.querySelector(".cart-table tbody").innerHTML = ""
       updateTotal()
@@ -114,7 +127,7 @@ if (document.readyState == 'loading') {
       totalAmount += productPrice * productQuantity
     }
     
-    totalAmount = totalAmount.toFixed(2)
-    totalAmount = totalAmount.replace(".", ",")
+   localStorage.totalAmount = totalAmount.toFixed(2)
+    localStorage.totalAmount = totalAmount.replace(".", ",")
     document.querySelector(".cart-total-container span").innerText = "R$" + totalAmount
   }
