@@ -230,7 +230,7 @@ body{
   transition: filter 0.2s;
   position: relative;
   left: 70px;
-  bottom: 33px;
+  bottom: 35px;
 }
 
 .remove-product-button:hover {
