@@ -127,7 +127,7 @@ if (document.readyState == 'loading') {
       totalAmount += productPrice * productQuantity
     }
     
-   localStorage.totalAmount = totalAmount.toFixed(2)
-    localStorage.totalAmount = totalAmount.replace(".", ",")
+   totalAmount = totalAmount.toFixed(2)
+  totalAmount = totalAmount.replace(".", ",")
     document.querySelector(".cart-total-container span").innerText = "R$" + totalAmount
   }
