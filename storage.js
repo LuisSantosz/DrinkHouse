@@ -1,5 +1,5 @@
 
-
+/*
 
 if (document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready)
@@ -94,9 +94,6 @@ function addProductToCart(event) {
 }
 
 
-
-/************************************************************************************************/
-
 //Alert da SweetAlert2 -  https://sweetalert2.github.io/#themes
 function makePurchase() {
   if (totalAmount === "0,00") {
@@ -108,7 +105,7 @@ function makePurchase() {
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#32CD32",
-      cancelButtonColor: "#d33",
+      cancelButtonColor: "",
       cancelButtonText: "Cancelar",
       confirmButtonText: "Finalizar compra"
     }).then((result) => {
@@ -149,3 +146,4 @@ totalAmount = totalAmount.toFixed(2)
 totalAmount = totalAmount.replace(".", ",")
   document.querySelector(".cart-total-container span").innerText = "R$" + totalAmount
 }
+*/
