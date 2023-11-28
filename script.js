@@ -46,9 +46,9 @@ if (document.readyState == 'loading') {
   function addProductToCart(event) {
     const button = event.target
     const productInfos = button.parentElement.parentElement
-    const productImage = productInfos.getElementsByClassName("product-image")[0].src
-    const productName = productInfos.getElementsByClassName("product-title")[0].innerText
-    const productPrice = productInfos.getElementsByClassName("product-price")[0].innerText
+    const productImage = productInfos.getElementsByClassName("imagem_produto")[0].src
+    const productName = productInfos.getElementsByClassName("nome_produto")[0].innerText
+    const productPrice = productInfos.getElementsByClassName("preco")[0].innerText
   
     const productsCartNames = document.getElementsByClassName("cart-product-title")
     for (var i = 0; i < productsCartNames.length; i++) {
@@ -77,7 +77,7 @@ if (document.readyState == 'loading') {
         </td>
       `
     
-    const tableBody = document.querySelector(".cart-table tbody")
+    const tableBody = document.querySelector(".tabela tbody")
     tableBody.append(newCartProduct)
     updateTotal()
   
@@ -110,24 +110,30 @@ if (document.readyState == 'loading') {
         }
       });
   
-      document.querySelector(".cart-table tbody").innerHTML = ""
+      document.querySelector(".tabela tbody").innerHTML = ""
       updateTotal()
     }
   }
   
   // Atualizar o valor total do carrinho
+
+
   function updateTotal() {
+
+
     const cartProducts = document.getElementsByClassName("cart-product")
     totalAmount = 0
   
     for (var i = 0; i < cartProducts.length; i++) {
       const productPrice = cartProducts[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$", "").replace(",", ".")
       const productQuantity = cartProducts[i].getElementsByClassName("product-qtd-input")[0].value
+
   
       totalAmount += productPrice * productQuantity
+
     }
     
-   totalAmount = totalAmount.toFixed(2)
+  totalAmount = totalAmount.toFixed(2)
   totalAmount = totalAmount.replace(".", ",")
     document.querySelector(".cart-total-container span").innerText = "R$" + totalAmount
   }

@@ -124,12 +124,12 @@ body{
   align-items: center;
 }
 
-.product-title {
+.nome_produto {
   font-size: 15px;
   margin-bottom: 6px;
 }
 
-.product-image {
+.imagem_produto {
   width: 240px; /* Flex wrap coloca 2 posters por linha, pq a seção tem 600px */
   height: 144px;
   display: grid;
@@ -138,7 +138,7 @@ body{
 }
 
 
-.product-price-container {
+.preco_container {
   margin-top: 8px;
   width: 100%;
   display: flex;
@@ -148,7 +148,7 @@ body{
 
 }
 
-.product-price {
+.preco {
   margin-right: 12px;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -171,7 +171,7 @@ body{
 }
 
 /* tabela carrinho de compras */
-.cart-table {
+.tabela {
   width: 100%;
   border-collapse: collapse;
 }
@@ -230,7 +230,8 @@ body{
   transition: filter 0.2s;
   position: relative;
   left: 70px;
-  bottom: 35px;
+  bottom: 36px;
+  position: relative;
 }
 
 .remove-product-button:hover {
