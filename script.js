@@ -1,6 +1,6 @@
-// script.js
 
-document.addEventListener('DOMContentLoaded', function () {
+
+/*document.addEventListener('DOMContentLoaded', function () {
   const carrinho = [];
   
 
@@ -163,5 +163,5 @@ document.querySelector('.carrinho').addEventListener('click', function (event) {
   }
 });
 
-
+*/
 
