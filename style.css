@@ -110,7 +110,7 @@ body{
   margin-top: 80px;
 }
 
-.products-container {
+.produtos {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column 2;
@@ -130,7 +130,7 @@ body{
 }
 
 .imagem_produto {
-  width: 240px; /* Flex wrap coloca 2 posters por linha, pq a seção tem 600px */
+  width: 240px; 
   height: 144px;
   display: grid;
   grid-column: 2;
@@ -150,7 +150,7 @@ body{
 
 .preco {
   margin-right: 12px;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 
@@ -171,66 +171,44 @@ body{
 }
 
 /* tabela carrinho de compras */
-.tabela {
+.carrinho {
   width: 100%;
   border-collapse: collapse;
+  gap: 15px;
+  padding: 15px;
 }
 
 .table-head-item {
   text-align: start;
-  border-bottom: 1px solid var(--gray);
-  padding-bottom: 6px;
+  padding-bottom: 10px;
   text-transform: uppercase;
 }
-
+.first.col
 .second-col,
 .third-col {
-  width: 26%;
+width: 35%;
+gap: 50px;
+text-align: center;
+
 }
+
+
 
 .cart-product td {
   padding: 8px 0;
 }
 
-.product-identification {
-  display: flex;
-  align-items: center;
-}
-
-.cart-product-image {
-  width: 120px;
-  height: 70px;
-}
-
-.cart-product-title {
-  margin-left: 16px;
-  font-size: 18px;
-}
-
-.cart-product-price {
-  font-family: "Raleway", sans-serif;
-}
-
-.product-qtd-input {
-  width: 48px;
-  height: 34px;
-  border-radius: 6px;
-  border: 2px solid var(--blue);
-  text-align: center;
-  background: #eee;
-}
-
-.remove-product-button {
+.remove-button {
   margin-left: 12px;
   background: #ff0000;
   color: var(--white);
-  padding: 10px 8px;
+  padding: 3px 5px;
   border: 0;
-  border-radius: 6px;
+  border-radius: 10px;
   transition: filter 0.2s;
   position: relative;
-  left: 70px;
-  bottom: 36px;
+  right: 40px;
+  top: 1px;
   position: relative;
 }
 
@@ -252,7 +230,7 @@ body{
 .purchase-button {
   display: flex;
   margin: 24px auto 0;
-  background: var(--blue);
+  background: #32CD32;
   color: var(--white);
   border: 0;
   border-radius: 6px;
@@ -268,75 +246,10 @@ body{
   filter: brightness(0.8);
 }
 
-
-
-/* Responsividade */
-@media (max-width: 584px) {
-  .movie-title-large {
-    font-size: 36px;
-  }
-
-  .schedule-item {
-    flex-wrap: wrap;
-    text-align: center;
-  }
-
-  .schedule-item + .schedule-item {
-    margin-top: 12px;
-  }
-
-  .show-date,
-  .show-place {
-    width: 32%;
-    padding: 4px;
-  }
-
-  .show-city {
-    width: 33%;
-    padding: 4px;
-  }
-
-  .buy-ticket-button {
-    width: 60%;
-    margin-top: 12px;
-    padding: 12px 2px;
-  }
-
-
-  .products-container {
-    justify-content: center;
-  }
-
-  .product-identification {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .cart-product-title {
-    margin-top: 6px;
-  }
-
-  .product-qtd-input {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .remove-product-button {
-    display: block;
-    margin: 8px auto 0;
-  }
-}
-
-@media (max-width: 470px) {
-  .about-movie-image {
-    width: 160px;
-  }
-
-  .main-footer-container {
-    flex-direction: column;
-  }
-
-  .movie-title-medium {
-    margin-bottom: 16px;
-  }
+.quantidade-input {
+  width: 40px;
+  text-align: center;
+  left: 30px;
+  position: relative;
+  
 }
